@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F5BB5181-70CA-4A9F-9629-3F0959C3539B}</ProjectGuid>
+    <ProjectGuid>{5EEC51AD-69CB-4012-B892-C7F8BE9C8D91}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>TiposDatosAtributos</RootNamespace>
-    <AssemblyName>TiposDatosAtributos</AssemblyName>
+    <RootNamespace>MediosTransporte</RootNamespace>
+    <AssemblyName>MediosTransporte</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -35,6 +35,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Automovil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
