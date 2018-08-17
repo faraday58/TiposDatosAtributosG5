@@ -11,12 +11,24 @@ namespace MediosTransporte
             Automovil miAutomovil = new Automovil();
             Console.WriteLine("Ingrese la marca de su automóvil");
             string marca = Console.ReadLine();
+            miAutomovil = new Automovil(marca);
             Console.WriteLine("Ingrese el color del automovil");
             string color = Console.ReadLine();
             Console.WriteLine("Ingrese el modelo del automovil");
             short modelo = short.Parse(Console.ReadLine());
             Automovil suAutomovil = new Automovil(marca);
+            suAutomovil.Modelo = modelo;
+            Console.WriteLine("El modelo de suAutomóvil es : {0}", suAutomovil.Modelo);
+            
+
             Automovil elAutomovil = new Automovil(color, modelo);
+
+            Console.WriteLine("Ingrese el peso de su vehiculo: ");
+            float peso = float.Parse(Console.ReadLine());
+            suAutomovil.Peso = peso;
+            Console.WriteLine("El peso de su Automovil es : {0}", suAutomovil.Peso);
+            //suAutomovil = elAutomovil;
+
 
             /* Ya no es accesible por se private
              * 

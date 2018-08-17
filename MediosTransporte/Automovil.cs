@@ -4,6 +4,7 @@ namespace MediosTransporte
 {
     class Automovil
     {
+        #region Atributos
 
         private string marca;
         private string color;
@@ -13,14 +14,54 @@ namespace MediosTransporte
         private const short llantas = 4;
         private static string gasolina;
 
+        #endregion
+
+        #region Propiedades
+        public short Modelo {
+            get => modelo;
+            set
+            {
+                if ( value < 1899 || value > 2019  )
+                {
+                    modelo = 2018;
+                }
+                else
+                {
+                    modelo = value;
+                }
+                
+            }
+                
+        }
+
+        public float Peso {
+            get => peso;
+            set {
+                if (peso <= 100 || peso > 10000)
+                {
+                    peso = 1000;
+                }
+                else {
+                    peso = value;
+                }
+            } 
+        }
+
+        #endregion
+
+
+
+
+
+        #region Constructores
         public Automovil()
         {
             marca = "Ferrari";
             color = "Rojo";
-            peso = 1000;
+            Peso = 1000;
             costo = 4_000_000;
-            modelo = 2019;
-            Console.WriteLine("La marca de mi auto: {0}\n color: {1} \n peso: {2} kg \n costo: ${3} \n modelo: {4}  ",marca,color,peso,costo,modelo);
+            Modelo = 2019;
+            Console.WriteLine("La marca de mi auto: {0}\n color: {1} \n peso: {2} kg \n costo: ${3} \n modelo: {4}  ",marca,color,Peso,costo,Modelo);
             Encender();
 
         }
@@ -36,10 +77,11 @@ namespace MediosTransporte
         {
             this.color = color;
             this.modelo = modelo;
-            Console.WriteLine("El automóvil que elegiste es de color {0} y de modelo {1}",this.color,this.modelo);
+            Console.WriteLine("El automóvil que elegiste es de color {0} y de modelo {1}",this.color,this.Modelo);
         }
+        #endregion
 
-
+        #region Métodos
 
         public void Encender()
         {
@@ -49,6 +91,6 @@ namespace MediosTransporte
         {
             Console.WriteLine("Automovil apagado");
         }
-
+        #endregion
     }
 }
