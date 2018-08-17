@@ -9,6 +9,17 @@ namespace MediosTransporte
             //miAutmovil es un objeto de la clase Automovil
             //Se conoce como una instancia de la clase
             Automovil miAutomovil = new Automovil();
+            Console.WriteLine("Ingrese la marca de su automóvil");
+            string marca = Console.ReadLine();
+            Console.WriteLine("Ingrese el color del automovil");
+            string color = Console.ReadLine();
+            Console.WriteLine("Ingrese el modelo del automovil");
+            short modelo = short.Parse(Console.ReadLine());
+            Automovil suAutomovil = new Automovil(marca);
+            Automovil elAutomovil = new Automovil(color, modelo);
+
+            /* Ya no es accesible por se private
+             * 
             miAutomovil.marca = "Porsche";
             miAutomovil.modelo = 2017;
             miAutomovil.costo = 2.5f;
@@ -23,6 +34,9 @@ namespace MediosTransporte
             // Los atributos estáticos no se requieren acceder desde un objeto.
             Automovil.gasolina = "Premium";
             Console.WriteLine( "En mi automovil ocupé la gasolina: {0} ",Automovil.gasolina );
+            */
+
+
 
         }
     }
