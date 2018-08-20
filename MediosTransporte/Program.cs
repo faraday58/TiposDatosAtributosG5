@@ -15,6 +15,13 @@ namespace MediosTransporte
                 miAutomovil.Acelerar();
             }
 
+            Autobus autobusPullman = new Autobus();
+            Console.WriteLine("El modelo del autobus es: {0}",autobusPullman.Modelo);
+
+            Motocicleta MotocicletaHarley = new Motocicleta();
+            Console.WriteLine("El modelo de la motocicleta es: "+MotocicletaHarley.Modelo);
+            MotocicletaHarley.Apagar();
+
 
             Console.WriteLine("Ingrese la marca de su automóvil");
             string marca = Console.ReadLine();

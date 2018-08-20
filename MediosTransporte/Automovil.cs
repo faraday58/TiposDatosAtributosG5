@@ -54,7 +54,7 @@ namespace MediosTransporte
             }
             set {
 
-                if( velocidad >= 254)
+                if( value >= 254)
                 {
                     velocidad = 254;
                 }
