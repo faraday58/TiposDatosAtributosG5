@@ -5,8 +5,8 @@ namespace MediosTransporte
     class Automovil
     {
         #region Atributos
-
         private string marca;
+        private byte velocidad;
         private string color;
         private float peso;
         private float costo;
@@ -47,9 +47,26 @@ namespace MediosTransporte
             } 
         }
 
+        public byte Velocidad {
+            get
+            {
+               return velocidad;
+            }
+            set {
+
+                if( velocidad >= 254)
+                {
+                    velocidad = 254;
+                }
+                else
+                {
+                    velocidad = value;
+                }
+                   
+            }
+        }
+
         #endregion
-
-
 
 
 
@@ -91,6 +108,12 @@ namespace MediosTransporte
         {
             Console.WriteLine("Automovil apagado");
         }
+        public void Acelerar()
+        {
+            Velocidad++; //Velocidad = Velocidad +1;
+            Console.WriteLine(Velocidad + " km/h "  );
+        }
+
         #endregion
     }
 }

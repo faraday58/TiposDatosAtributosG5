@@ -9,6 +9,13 @@ namespace MediosTransporte
             //miAutmovil es un objeto de la clase Automovil
             //Se conoce como una instancia de la clase
             Automovil miAutomovil = new Automovil();
+            miAutomovil.Velocidad = 250;
+            for(int i=0; i <  7; i++)
+            {
+                miAutomovil.Acelerar();
+            }
+
+
             Console.WriteLine("Ingrese la marca de su automóvil");
             string marca = Console.ReadLine();
             miAutomovil = new Automovil(marca);
